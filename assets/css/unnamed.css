@@ -1,14 +1,20 @@
 
+/* Base Styles */
+
 html, body, .screen-content {
   height: 100%;
   overflow: hidden;
 }
 
 body {
-  /*background-color: rgb( 55, 55, 50);*/
-  /*color: white;*/
   padding: 0;
   margin: 0;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 div.screen-content {
@@ -40,7 +46,7 @@ section.content {
   overflow: auto;
 }
 
-section.content .content-wrapper {
+section.content .inner-wrapper {
   padding: 50px 85px;
 }
 
@@ -62,4 +68,8 @@ section.content .content-wrapper {
     overflow: visible;
   }
 
+}
+
+.hidden {
+  display: none;
 }

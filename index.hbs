@@ -20,7 +20,7 @@
 
   <section class = "content" >
 
-    <div class = "content-wrapper" >
+    <div class = "inner-wrapper" >
 
 
       {{#foreach posts}}
@@ -34,8 +34,11 @@
 
         </header>
 
-        <section class="post-content">
-          {{content}}
+        <section class="post-excerpt-container">
+          <p>{{excerpt characters=100}}&hellip;</p>
+          <div class="hidden">{{content}}</div>
+          <div class="action"><a href="{{url}}">Read More</a></div>
+          <div style="margin-bottom: 20px"></div>
         </section>
 
       </article>
