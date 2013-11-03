@@ -26,6 +26,7 @@ aside.cover, section.content {
   top: 0;
   bottom: 0;
   position: absolute;
+  background-size: cover;
 }
 
 aside.cover:hover {
