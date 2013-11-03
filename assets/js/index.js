@@ -43,7 +43,7 @@
             // // Makes use of the {{content}} exposed to handlebars
             // // // dumped in a div and hudden because we don't want to hack Ghost
 
-            var hiddenContent = excerpts[i].getElementsByClassName("hidden")[0]
+            var hiddenContent = excerpts[i].getElementsByClassName("hidden")[0];
 
             // ensure hidden content
 
@@ -51,7 +51,7 @@
 
             // produce time to read string
 
-              , timeString = produceTimeString( stripHTML( hiddenContent.innerHTML ));
+            var timeString = produceTimeString( stripHTML( hiddenContent.innerHTML ));
 
             // Add time to read to the action div content
 
