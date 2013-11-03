@@ -32,6 +32,10 @@
 
           var excerpts = document.getElementsByClassName("post-excerpt-container");
 
+          // ensure excerpts
+
+          if ( excerpts.length == 0 ) return
+
           for (var i = 0; i < excerpts.length; i++) {
 
             // Get hidden content
@@ -41,20 +45,26 @@
 
             var hiddenContent = excerpts[i].getElementsByClassName("hidden")[0]
 
+            // ensure hidden content
+
+            if ( hiddenContent == undefined  ) return
+
             // produce time to read string
 
-              , timeString = produceTimeString(stripHTML(hiddenContent.innerHTML));
-
-            // remove hidden content
-
-            excerpts[i].removeChild(hiddenContent);
+              , timeString = produceTimeString( stripHTML( hiddenContent.innerHTML ));
 
             // Add time to read to the action div content
 
             var action = excerpts[i].getElementsByClassName("action")[0];
             action.innerHTML += ' · ' + timeString;
 
+            // remove hidden content
+
+            excerpts[i].removeChild( hiddenContent );
+
           };
+
+          return
 
         }
 
